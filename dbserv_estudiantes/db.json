@@ -1,0 +1,74 @@
+{
+  "estudiantes": [
+    {
+      "id": "1",
+      "nombre": "Ana",
+      "apellido": "Garcia",
+      "edad": 20,
+      "carrera": "Ingeniería Civil"
+    },
+    {
+      "id": "2",
+      "nombre": "Juan",
+      "apellido": "Martínez",
+      "edad": 22,
+      "carrera": "Administración de Empresas"
+    },
+    {
+      "id": "3",
+      "nombre": "María",
+      "apellido": "Lopez",
+      "edad": 19,
+      "carrera": "Psicología"
+    },
+    {
+      "id": "4",
+      "nombre": "Carlos",
+      "apellido": "Rodriguez",
+      "edad": 21,
+      "carrera": "Medicina"
+    },
+    {
+      "id": "5",
+      "nombre": "Laura",
+      "apellido": "Perez",
+      "edad": 23,
+      "carrera": "Derecho"
+    },
+    {
+      "id": "6",
+      "nombre": "Javier",
+      "apellido": "González",
+      "edad": 20,
+      "carrera": "Ingeniería de Sistemas"
+    },
+    {
+      "id": "7",
+      "nombre": "Sofía",
+      "apellido": "Hernández",
+      "edad": 19,
+      "carrera": "Comunicación Social"
+    },
+    {
+      "id": "8",
+      "nombre": "David",
+      "apellido": "Díaz",
+      "edad": 24,
+      "carrera": "Arquitectura"
+    },
+    {
+      "id": "3d83",
+      "nombre": "Noel",
+      "apellido": "Andia",
+      "edad": 37,
+      "carrera": "Ingeniería de Sistemas"
+    }
+  ],
+  "usuarios": [
+    {
+      "id": "1",
+      "login": "admin",
+      "password": "admin"
+    }
+  ]
+}
