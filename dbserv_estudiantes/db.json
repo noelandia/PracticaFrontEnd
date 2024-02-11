@@ -63,12 +63,5 @@
       "edad": 37,
       "carrera": "Ingeniería de Sistemas"
     }
-  ],
-  "usuarios": [
-    {
-      "id": "1",
-      "login": "admin",
-      "password": "admin"
-    }
   ]
 }

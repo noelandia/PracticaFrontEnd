@@ -3,6 +3,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import {MatTableModule} from '@angular/material/table';
 import { ApiDbService } from '../../services/api-db.service';
 import { MatTableDataSource } from '@angular/material/table';
+import {MatIconModule} from '@angular/material/icon';
 
 export interface Estudiante {
   nombre: string;
@@ -14,13 +15,13 @@ export interface Estudiante {
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [NavbarComponent,MatTableModule],
+  imports: [NavbarComponent,MatTableModule,MatIconModule],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'
 })
 
 export class DashboardComponent implements OnInit{
-  nombres_columnas: string[] = ['nombre', 'apellido', 'edad', 'carrera'];
+  nombres_columnas: string[] = ['nombre', 'apellido', 'edad', 'carrera','editar','eliminar'];
   datos!: MatTableDataSource<Estudiante>;
 
   constructor(private servicio_rest: ApiDbService){  }
@@ -29,6 +30,14 @@ export class DashboardComponent implements OnInit{
     this.servicio_rest.getEstudiantes().subscribe(estudiantes => {
       this.datos = new MatTableDataSource<Estudiante>(estudiantes);
     })
+  }
+
+  accion1(){
+
+  }
+
+  accion2(){
+
   }
 
 }

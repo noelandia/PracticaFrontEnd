@@ -4,16 +4,31 @@
     justify-content: center;
     background-color: antiquewhite;
     height: 100%;
+    flex-direction: column;
 }
-
+.titulo {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #04288d;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 2rem 0;
+}
 .hijo{
     width: 100%;
     max-width: 330px;
     padding: 15px;
-    margin: auto;
+    margin: 2rem auto;
     text-align: center;
 }
-
+.hijo h1{
+    color: #3909aa;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+mat-form-field{
+    display: flex;
+    flex-direction: column;
+}
 .boton{
     width: 80%;
 }

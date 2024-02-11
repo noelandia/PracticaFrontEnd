@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, map } from 'rxjs';
 import { Estudiante } from '../components/dashboard/dashboard.component';
 
 @Injectable({
@@ -8,7 +8,7 @@ import { Estudiante } from '../components/dashboard/dashboard.component';
 })
 export class ApiDbService {
 
-  private apiEstUrl = 'http://localhost:3000/estudiantes'; 
+  private apiEstUrl = 'http://localhost:3000/estudiantes';
 
   constructor(private http: HttpClient) { }
 

@@ -4,6 +4,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
 import {FormControl, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
+import { ApiDbService } from '../../services/api-db.service';
 
 @Component({
   selector: 'app-login',
@@ -14,8 +15,10 @@ import {Router} from '@angular/router';
 })
 export class LoginComponent {
   logo = "../../../assets/acceso.png";
+  password!: string;
+  validationMessage!: string;
 
-  constructor(private router: Router){
+  constructor(private router: Router, private servicio_rest: ApiDbService){
 
   }
 
@@ -25,7 +28,6 @@ export class LoginComponent {
   });
 
   ingresarLogin():void{
-    //Código para verificar usuario y password
     this.router.navigateByUrl('/dashboard');
   }
 }
