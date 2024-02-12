@@ -4,6 +4,7 @@ import {MatTableModule} from '@angular/material/table';
 import { ApiDbService } from '../../services/api-db.service';
 import { MatTableDataSource } from '@angular/material/table';
 import {MatIconModule} from '@angular/material/icon';
+import { Router } from '@angular/router';
 
 export interface Estudiante {
   nombre: string;
@@ -21,10 +22,10 @@ export interface Estudiante {
 })
 
 export class DashboardComponent implements OnInit{
-  nombres_columnas: string[] = ['nombre', 'apellido', 'edad', 'carrera','editar','eliminar'];
+  nombres_columnas: string[] = ['id','nombre', 'apellido', 'edad', 'carrera','editar','eliminar'];
   datos!: MatTableDataSource<Estudiante>;
 
-  constructor(private servicio_rest: ApiDbService){  }
+  constructor(private servicio_rest: ApiDbService, private router: Router){  }
 
   ngOnInit(): void {
     this.servicio_rest.getEstudiantes().subscribe(estudiantes => {
@@ -32,12 +33,14 @@ export class DashboardComponent implements OnInit{
     })
   }
 
-  accion1(){
-
+  botonEditar(idEst:string){
+    this.router.navigateByUrl('/editar/'+idEst);
   }
 
-  accion2(){
-
+  botonEliminar(idEst: string){
+    this.servicio_rest.eliminarEstudiante(idEst).subscribe((result) => {
+      this.ngOnInit();     
+    });    
   }
 
 }

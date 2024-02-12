@@ -43,11 +43,11 @@
       "carrera": "Ingeniería de Sistemas"
     },
     {
-      "id": "7",
       "nombre": "Sofía",
       "apellido": "Hernández",
-      "edad": 19,
-      "carrera": "Comunicación Social"
+      "edad": 18,
+      "carrera": "Comunicación Social",
+      "id": "7"
     },
     {
       "id": "8",
@@ -57,11 +57,18 @@
       "carrera": "Arquitectura"
     },
     {
-      "id": "3d83",
       "nombre": "Noel",
       "apellido": "Andia",
       "edad": 37,
-      "carrera": "Ingeniería de Sistemas"
+      "carrera": "Ingeniería de Sistemas",
+      "id": "8b72"
+    },
+    {
+      "id": "50ba",
+      "nombre": "Ricardo",
+      "apellido": "Jimenez",
+      "edad": 25,
+      "carrera": "Economía"
     }
   ]
 }

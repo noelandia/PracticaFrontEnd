@@ -20,12 +20,16 @@ export class ApiDbService {
     return this.http.post<Estudiante>(this.apiEstUrl, nuevo_Estudiante);
   }
 
-  editarEstudiante(id: string, datos_nuevos: Estudiante): Observable<Estudiante>{
-    return this.http.put<Estudiante>(`${this.apiEstUrl}/${id}`,datos_nuevos);
+  editarEstudiante(id: string, datos_nuevos: any): Observable<any>{
+    return this.http.put<any>(`${this.apiEstUrl}/${id}`,datos_nuevos);
   }
 
   eliminarEstudiante(id: string): Observable<any>{
     return this.http.delete<any>(`${this.apiEstUrl}/${id}`);
+  }
+
+  getEstudianteById(id: string){
+    return this.http.get<Estudiante[]>(`${this.apiEstUrl}/${id}`);
   }
 
 }
